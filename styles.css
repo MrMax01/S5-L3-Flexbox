@@ -12,9 +12,26 @@ body {
   display: flex;
   color: #883d14;
 }
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: bolder;
+  margin-bottom: 0.7em;
+}
+h1 {
+  margin-bottom: 0.7em;
+}
 nav {
-  background-color: #ffdf7f;
+  background-color: #fef7e2;
   padding: 1em;
+  min-width: 185px;
+  position: fixed;
+  height: 100vh;
 }
 ul {
   display: flex;
@@ -25,7 +42,7 @@ ul {
   gap: 1em;
 }
 nav ul li {
-  background-color: #fef7e2;
+  background-color: #ffdf7f;
   padding: 1.5em 2em;
   border-radius: 50px;
   font-weight: bold;
@@ -44,4 +61,71 @@ nav ul li:first-of-type {
 }
 nav ul li img {
   width: 40px;
+}
+
+/*Card section*/
+main {
+  padding: 1.5em;
+  padding-left: 13em;
+}
+.cards {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.card {
+  width: 20%;
+  border-radius: 45px;
+  /* border: 2px solid red; */
+  overflow: hidden;
+  background-color: #fef7e2;
+}
+.card img {
+  width: 100%;
+  overflow: hidden;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+}
+.description-card {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.card button {
+  border: none;
+  background-color: #ffdf7f;
+  color: #883d14;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-block: 0.5em;
+  margin-top: 1em;
+  border-radius: 25px;
+  width: 80%;
+}
+
+/*NEWS*/
+.news {
+  display: flex;
+  padding: 1.5em;
+  background-color: #fef7e2;
+  border-radius: 25px;
+  gap: 1em;
+}
+@media (max-width: 1200px) {
+  .cards .card:last-of-type {
+    display: none;
+    z-index: -1;
+  }
+  .cards > .card {
+    width: 25%;
+  }
+  .news {
+    flex-direction: column-reverse;
+  }
 }
